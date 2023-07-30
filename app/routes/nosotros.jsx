@@ -26,11 +26,6 @@ export function links() {
 }
 
 function Nosotros() {
-  console.log("nuevos cambios");
-  console.log("nuevos cambios");
-  console.log("nuevos cambios");
-  console.log("nuevos cambios");
-  console.log("nuevos cambios");
   return (
     <main className="contenedor nosotros">
       <h2 className="heading">Nosotros</h2>
