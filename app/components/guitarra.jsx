@@ -13,7 +13,9 @@ export default function Guitarra({ guitarra }) {
         <h3>{nombre}</h3>
         <p className="descripcion">{descripcion}</p>
         <p className="precio">${precio}</p>
-        <Link to={`/guitarras/${url}`}>Ver Producto</Link>
+        <Link to={`/guitarras/${url}`} className="enlace">
+          Ver Producto
+        </Link>
       </div>
     </div>
   );
