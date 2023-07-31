@@ -16,11 +16,11 @@ export const loader = async ({ params }) => {
 
 export function meta({ data }) {
   //cuando el loader se carga la datas queda lista
-  if (!data) {
+  if (data.length === 0) {
     return [
       {
-        title: `GuitarLA - No encontrada`,
-        description: `Guitarras, venta de guitarras, guitarra no encontrada`,
+        title: "GuitarLA - No encontrada",
+        description: "Guitarras, venta de guitarras, guitarra no encontrada",
       },
     ];
   }

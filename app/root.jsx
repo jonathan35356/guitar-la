@@ -2,6 +2,7 @@ import {
   useRouteError,
   isRouteErrorResponse,
   Meta,
+  Link,
   Links,
   Outlet,
   Scripts,
@@ -85,9 +86,12 @@ export function ErrorBoundary() {
   if (isRouteErrorResponse(error)) {
     return (
       <Document>
-        <h1>Oops</h1>
-        <p>Status: {error.status}</p>
-        <p>{error.data.message}</p>
+        <p className="error">
+          Status: {error.status} {error.statusText}
+        </p>
+        <Link to="/" className="error-enlace">
+          Tal vez quieras volver al inicio
+        </Link>
       </Document>
     );
   }
@@ -103,6 +107,9 @@ export function ErrorBoundary() {
     <Document>
       <h1>Uh oh2 ...</h1>
       <p>Something went wrong.</p>
+      <Link to="/" className="error-enlace">
+        Tal vez quieras volver al inicio
+      </Link>
       <pre>{errorMessage}</pre>
     </Document>
   );
