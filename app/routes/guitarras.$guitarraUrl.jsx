@@ -5,11 +5,25 @@ import styles from "../styles/guitarras.css";
 export const loader = async ({ params }) => {
   const { guitarraUrl } = params;
   const datos = await getGuitarra(guitarraUrl);
+  if (datos.data.length === 0) {
+    throw new Response("", {
+      status: 404,
+      statusText: "Guitarra No Encontrada",
+    });
+  }
   return datos.data[0].attributes;
 };
 
 export function meta({ data }) {
   //cuando el loader se carga la datas queda lista
+  if (!data) {
+    return [
+      {
+        title: `GuitarLA - No encontrada`,
+        description: `Guitarras, venta de guitarras, guitarra no encontrada`,
+      },
+    ];
+  }
   return [
     {
       title: `GuitarLA - ${data.nombre}`,

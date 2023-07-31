@@ -1,4 +1,6 @@
 import {
+  useRouteError,
+  isRouteErrorResponse,
   Meta,
   Links,
   Outlet,
@@ -76,12 +78,32 @@ function Document({ children }) {
 
 //manejo de errores
 
-export function CatchBoundary() {
-  const error = useCatch();
+export function ErrorBoundary() {
+  const error = useRouteError();
+
+  // when true, this is what used to go to `CatchBoundary`
+  if (isRouteErrorResponse(error)) {
+    return (
+      <Document>
+        <h1>Oops</h1>
+        <p>Status: {error.status}</p>
+        <p>{error.data.message}</p>
+      </Document>
+    );
+  }
+
+  // Don't forget to typecheck with your own logic.
+  // Any value can be thrown, not just errors!
+  let errorMessage = "Unknown error";
+  if (error) {
+    errorMessage = error.message;
+  }
+
   return (
     <Document>
-      {error.status}
-      {error.statusText}
+      <h1>Uh oh2 ...</h1>
+      <p>Something went wrong.</p>
+      <pre>{errorMessage}</pre>
     </Document>
   );
 }
