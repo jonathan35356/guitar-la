@@ -2,10 +2,10 @@
 /* eslint-disable react/prop-types */
 import { Link } from "@remix-run/react";
 import React from "react";
+import { formatearFecha } from "../utils/helpers";
 
 function Post({ post }) {
   const { titulo, contenido, imagen, url, publishedAt } = post.attributes;
-  console.log(imagen);
   return (
     <article className="post">
       <img
@@ -15,7 +15,7 @@ function Post({ post }) {
       ></img>
       <div className="contenido">
         <h3>{titulo}</h3>
-        <p className="fecha">{publishedAt}</p>
+        <p className="fecha">{formatearFecha(publishedAt)}</p>
         <p className="resumen">{contenido}</p>
         <Link to={`posts/${url}`} className="enlace">
           Leer Post

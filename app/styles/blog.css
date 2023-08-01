@@ -1,6 +1,3 @@
-.post {
-}
-
 .blog {
   display: grid;
   grid-template-columns: 1fr;
@@ -19,7 +16,9 @@
   }
 }
 
-.post {
+.post .fecha {
+  font-size: 1.4rem;
+  color: var(--primary);
 }
 
 .post .contenido {
