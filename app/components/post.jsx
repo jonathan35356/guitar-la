@@ -3,6 +3,11 @@
 import { Link } from "@remix-run/react";
 import React from "react";
 import { formatearFecha } from "../utils/helpers";
+import styles from "../styles/blog.css";
+
+export function meta() {
+  return [{ rel: "stylesheet", href: styles }];
+}
 
 function Post({ post }) {
   const { titulo, contenido, imagen, url, publishedAt } = post.attributes;
