@@ -18,6 +18,10 @@ export async function loader() {
   return posts.data;
 }
 
+export function meta() {
+  return [{ title: "GuitarLa - Nuestro Blog" }];
+}
+
 function Blog() {
   const posts = useLoaderData();
 
