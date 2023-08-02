@@ -7,8 +7,8 @@ import {
   Outlet,
   Scripts,
   LiveReload,
-  useCatch,
 } from "@remix-run/react";
+
 import { Header } from "./components/header";
 import Footer from "./components/footer";
 import styles from "./styles/index.css";
