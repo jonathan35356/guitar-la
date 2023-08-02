@@ -7,6 +7,7 @@ import { getCurso } from "../models/cursos.server";
 import stylesPosts from "../styles/blog.css";
 import ListadoPosts from "../components/listado-posts";
 import Curso from "../components/curso";
+import stylesCurso from "../styles/curso.css";
 
 export function meta() {
   return [{}];
@@ -16,6 +17,7 @@ export function links() {
   return [
     { rel: "stylesheet", href: stylesGuitarras },
     { rel: "stylesheet", href: stylesPosts },
+    { rel: "stylesheet", href: stylesCurso },
   ];
 }
 
