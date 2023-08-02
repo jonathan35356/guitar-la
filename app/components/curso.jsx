@@ -1,13 +1,15 @@
 import React from "react";
 
 export default function Curso({ curso }) {
-  console.log(curso.titulo);
+  const { titulo, imagen, contenido } = curso;
   return (
-    <div>
-      <h2 className="contenido">{curso.titulo}</h2>
-      <div className="curso">{curso.name}</div>
-    </div>
+    <section className="curso">
+      <div className="contenedor curso-grid">
+        <div className="contenido">
+          <h2 className="heading">{titulo}</h2>
+          <p className="texto">{contenido}</p>
+        </div>
+      </div>
+    </section>
   );
-
-  sssssssssssssssssss;
 }

@@ -35,8 +35,9 @@ function Index() {
     <div>
       <main className="contenedor">
         <ListadoGuitarras guitarras={guitarras} />
+        <Curso curso={curso.attributes} />
       </main>
-      <Curso curso={curso.attributes} />
+
       <section className="contenedor">
         <ListadoPosts posts={posts} />
       </section>
