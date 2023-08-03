@@ -1,4 +1,4 @@
-import Navegacion from "./nav";
+import Navegacion from "./navegacion";
 function Footer() {
   return (
     <footer className="footer">

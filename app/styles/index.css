@@ -71,7 +71,12 @@ main {
 .header .navegacion {
   display: flex;
   gap: 2rem;
+  align-items: center;
   margin-top: 5rem;
+}
+
+.header .navegacion img {
+  width: 3rem;
 }
 
 @media (min-width: 768px) {
@@ -108,6 +113,10 @@ main {
     display: flex;
     justify-content: space-between;
   }
+}
+
+.footer .navegacion a:last-of-type {
+  display: none;
 }
 
 .footer .navegacion {

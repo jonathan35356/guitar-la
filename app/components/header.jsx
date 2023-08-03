@@ -1,6 +1,6 @@
 import Logo from "../../public/img/logo.svg";
 import { Link } from "@remix-run/react";
-import Navegacion from "./nav";
+import Navegacion from "./navegacion";
 export function Header() {
   return (
     <header className="header">
